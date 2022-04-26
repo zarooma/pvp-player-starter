@@ -1,12 +1,22 @@
 var fs = require('fs');
-var 
-var kn = {hp:150,dam:20,speed:15,mag:3,defence:12,wepon1:startsword,wepon2:"none",items:items,}; 
+var startsword = {dam:dam + 3,defense:5}
+var kn = {luck:10 ,hp:150,dam:20,speed:15,mag:3,defence:12,wepon1:startsword,wepon2:"none",items:items,}; 
 var user = prompt("username: ")
 var pas = prompt("pasword: ")
 var items = "noune"
 var login = prompt("chose one: ")
 var pickcl = "knight mage archer assian thief chose one"
 var pcl = prompt("")
+var crit = math.floor(math.random() * 101);
+function crit() {
+ var critchance = crit + luck  
+  if (critchance > 70) {
+   dam + 20 
+  }
+  
+  
+  
+}
 console.log("if you have a acount type login if you dont type reg ")
 login
 if (login == "reg") {
@@ -22,6 +32,10 @@ console.log(pickcl)
   if (err) throw err;
   console.log('Saved!');
 });
+  
+} else if (login == "reg") {
+  
+  
   
 }
 
