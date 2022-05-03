@@ -9,9 +9,9 @@ var pickcl = "knight mage archer assian thief chose one"
 var pcl = prompt("")
 var crit = math.floor(math.random() * 101);
 function crit() {
- var critchance = crit + luck  
+ var critchance = crit + pcl.luck  
   if (critchance > 70) {
-   dam + 20 
+   pcl.dam + 20 
   }
   
   
@@ -20,22 +20,29 @@ function crit() {
 console.log("if you have a acount type login if you dont type reg ")
 login
 if (login == "reg") {
-console.log("tpye username);
+console.log("tpye username");
   user
+
 console.log("type pasword");
   pas
 console.log("chouse a class")
 console.log(pickcl)
   pcl
   
-  fs.appendFile( user +'.txt'," players name: " + user + " pasword: " + pas + " class: " + pcl +, function (err) {
+  fs.appendFile( 'user.txt'," players name: " + user + " pasword: " + pas + " class: " + pcl + function (err) {
   if (err) throw err;
   console.log('Saved!');
 });
   
 } else if (login == "reg") {
-  
-  
+  console.log("tpye username);
+  user
+  fs.readFile(´user.txt´, function (err, data) {
+  if (err) throw err;
+  if(data.includes(" players name: " + user + " pasword: " + pas)){
+   console.log(corect)
+  }
+});
   
 }
 
