@@ -38,9 +38,9 @@ console.log(pickcl)
 });
   
 } else if (login == "login") {
-  console.log("tpye username);
-  user
-  fs.readFile(´user.txt´, function (err, data) {
+  console.log(`tpye username ${user}`)
+  
+  fs.readFile('user.txt', function (err, data) {
   if (err) throw err;
   if(data.includes(" players name: " + user + " pasword: " + pas)){
    console.log(corect)
