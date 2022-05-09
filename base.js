@@ -34,7 +34,7 @@ console.log(pickcl)
   console.log('Saved!');
 });
   
-} else if (login == "reg") {
+} else if (login == "login") {
   console.log("tpye username);
   user
   fs.readFile(´user.txt´, function (err, data) {
@@ -45,4 +45,5 @@ console.log(pickcl)
 });
   
 }
+console.log(`wellcome ${user}`)
 
