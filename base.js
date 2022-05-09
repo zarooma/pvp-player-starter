@@ -48,5 +48,7 @@ console.log(pickcl)
 });
   
 }
+if (login == "reg") {
 console.log(`wellcome ${user}`)
+}
 
