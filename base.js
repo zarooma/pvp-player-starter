@@ -22,7 +22,10 @@ login
 if (login == "reg") {
 console.log("tpye username");
   user
-
+fs.readFile('user.txt', 'players name:' + user + function (err) {
+  if (err) throw err;
+ console.log('valid');
+});
 console.log("type pasword");
   pas
 console.log("chouse a class")
