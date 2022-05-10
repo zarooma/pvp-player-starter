@@ -8,15 +8,6 @@ var login = prompt("chose one: ")
 var pickcl = "knight mage archer assian thief chose one"
 var pcl = prompt("")
 var crit = math.floor(math.random() * 101);
-function crit() {
- var critchance = crit + pcl.luck  
-  if (critchance > 70) {
-   pcl.dam + 20 
-  }
-  
-  
-  
-}
 console.log("if you have a acount type login if you dont type reg ")
 login
 if (login == "reg") {
@@ -39,7 +30,7 @@ console.log(pickcl)
   
 } else if (login == "login") {
   console.log(`tpye username ${user}`)
-  
+  console.log(`type pasword ${pas}`)
   fs.readFile('user.txt', function (err, data) {
   if (err) throw err;
   if(data.includes(" players name: " + user + " pasword: " + pas)){
