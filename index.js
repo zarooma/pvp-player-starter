@@ -13,9 +13,12 @@ login
 if (login == "reg") {
 console.log("tpye username");
   user
-fs.readFile('user.txt', 'players name:' + user + function (err) {
-  if (err) throw err;
- console.log('valid');
+  fs.readFile('user.txt', function (err, data) {
+    if (err) throw err;
+    if(data.includes(" players name: " + user)){
+     console.log(`ìncorect`)
+     console.error()
+    }
 });
 console.log("type pasword");
   pas
